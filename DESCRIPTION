@@ -1,0 +1,25 @@
+Package: glmMIC
+Type: Package
+Title: Sparse Estimation of Generalized Linear Models (GLM) via Minimum approximated
+    Inforamtion Criterion (MIC)
+Version: 0.1.0
+Author: Xiaogang Su
+Maintainer: Xiaogang Su <xiaogangsu@gmail.com>
+Description: This packages computes sparse estimates for generalized linear models (GLM) via
+    MIC, a short name for "Minimizing approxiamted Inforatmion Criterion". MIC
+    mimics the best subset selection using a penalized likelihood approach yet
+    with no need of a tuning parameter. The problem is further reformulated with
+    a reparameterization step so that it reduces to an unconstrained nonconvex
+    yet smooth programming problem, which can be solved efficiently. The global
+    optimization algorithm, Simulated annealing (SA) or its generalized version (GenSA),
+    is used for optimization, possibly combined with a local optimization
+    algorithm (BFGS). Furthermore, the reparameterization tactic yields an
+    additional advantage in terms of circumventing post-selection inference.
+License: GPL-2
+Depends:
+    R (>= 3.2.5)
+Imports:
+    GenSA (>= 1.1.6),
+    numDeriv (>= 2014.2-1)
+LazyData: TRUE
+RoxygenNote: 5.0.1
